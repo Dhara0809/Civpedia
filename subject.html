@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test Learn</title>
+</head>
+
+<body>
+
+<h2>Main Menu</h2>
+
+<button onclick="openSection('theory')">Theory</button>
+
+<div id="mainMenu"></div>
+
+<div id="subjects" style="display:none;">
+  <h3>Subjects</h3>
+  <button onclick="openSubject('som')">SOM</button>
+</div>
+
+<!-- THEORY -->
+<div id="theoryContent" style="display:none;">
+  <button onclick="goBackSubjects()">Back</button>
+  <h2 id="subjectTitle"></h2>
+  <div id="theoryContainer"></div>
+</div>
+
+<script src="learn.js"></script>
+
+</body>
+</html>

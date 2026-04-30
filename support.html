@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support - CivPedia</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <h1>CivPedia</h1>
+  <p>Learn. Estimate. Execute.</p>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="ask.html">Ask</a>
+  <a href="learn.html">Learn</a>
+  <a href="codes.html">Code Books</a>
+  <a href="software.html">Software</a>
+  <a href="tools.html">Tools</a>
+  <a href="pro.html">Pro</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="support.html" class="active">Support</a>
+</nav>
+
+<main class="container">
+
+<!-- INTRO -->
+<section class="intro">
+  <h2>❤️ Support CivPedia</h2>
+  <p>If CivPedia helped you learn something — that means everything.</p>
+  <p>Your support helps build better tools & free resources.</p>
+</section>
+
+<!-- SUPPORT OPTIONS -->
+<h3 class="section-title">💰 Support Options</h3>
+
+<div class="tool-grid">
+
+<div class="box">
+  <h3>☕ Coffee</h3>
+  <p>Small support</p>
+  <button class="cta-btn" onclick="pay('coffee')">Buy Coffee</button>
+</div>
+
+<div class="box">
+  <h3>🍛 Meal</h3>
+  <p>Bigger support</p>
+  <button class="cta-btn" onclick="pay('meal')">Give Meal</button>
+</div>
+
+<div class="box">
+  <h3>💙 UPI</h3>
+  <p id="upiText">civpedia4u@upi</p>
+  <button class="cta-btn" onclick="copyUPI()">Copy UPI</button>
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<section class="intro">
+  <h3>📞 Contact</h3>
+  <p><b>Email:</b> civpedia4u@outlook.com</p>
+
+  <p>
+    <a href="https://instagram.com/civpedia_base_to_beyond">📸 Instagram</a><br>
+    <a href="https://youtube.com/@civpedia_basetobeyond?si=ZKES">▶️ YouTube</a>
+  </p>
+</section>
+
+</main>
+
+<!-- SAME FOOTER -->
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div class="footer-section">
+<h3>CivPedia</h3>
+<p>Learn. Estimate. Execute.</p>
+<p>Helping civil engineers grow smarter every day.</p>
+</div>
+
+<div class="footer-section">
+<h4>Explore</h4>
+<a href="learn.html">Learn</a>
+<a href="tools.html">Tools</a>
+<a href="ask.html">Dictionary</a>
+<a href="software.html">Software</a>
+<a href="codes.html">Code Books</a>
+</div>
+
+<div class="footer-section">
+<h4>Connect</h4>
+<a href="mailto:civpedia4u@outlook.com">📧 Email</a>
+<a href="https://instagram.com/civpedia_base_to_beyond">📸 Instagram</a>
+<a href="https://youtube.com/@civpedia_basetobeyond?si=ZKES">▶️ YouTube</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 CivPedia • Made with ❤️ for Civil Engineers
+</div>
+
+</footer>
+
+<script>
+function copyUPI(){
+  let text = document.getElementById("upiText").innerText;
+  navigator.clipboard.writeText(text);
+  alert("UPI Copied!");
+}
+
+function pay(type){
+  alert("Payment feature coming soon 💰");
+}
+</script>
+
+</body>
+</html>

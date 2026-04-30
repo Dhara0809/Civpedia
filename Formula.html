@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CivPedia - Formula Master Page</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.section {
+  background: #ffffff10;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+h2 { color: #00e6e6; }
+h3 { color: #ffd369; }
+
+.formula {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.formula:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>📐 CivPedia Formula Master Page</h1>
+
+</div>
+
+<!-- SUBJECT BOXES (ALL 22) -->
+<div class="section">
+<h2>📚 Subjects</h2>
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:15px;">
+
+<a href="concrete.html" style="text-decoration:none;"><div class="formula">🧱 Concrete Technology</div></a>
+<a href="rcc.html" style="text-decoration:none;"><div class="formula">🏗 RCC</div></a>
+<a href="structural.html" style="text-decoration:none;"><div class="formula">📊 Structural Analysis</div></a>
+<a href="mechanics.html" style="text-decoration:none;"><div class="formula">⚙ Engineering Mechanics</div></a>
+<a href="fluid.html" style="text-decoration:none;"><div class="formula">💧 Fluid Mechanics</div></a>
+<a href="hydrology.html" style="text-decoration:none;"><div class="formula">🌧 Hydrology</div></a>
+<a href="irrigation.html" style="text-decoration:none;"><div class="formula">🚜 Irrigation</div></a>
+<a href="soil.html" style="text-decoration:none;"><div class="formula">🌍 Geotechnical</div></a>
+<a href="foundation.html" style="text-decoration:none;"><div class="formula">🏢 Foundation Engg</div></a>
+<a href="environment.html" style="text-decoration:none;"><div class="formula">🌿 Environmental</div></a>
+<a href="water.html" style="text-decoration:none;"><div class="formula">🚰 Water Supply</div></a>
+<a href="wastewater.html" style="text-decoration:none;"><div class="formula">♻ Wastewater</div></a>
+<a href="transport.html" style="text-decoration:none;"><div class="formula">🚧 Transportation</div></a>
+<a href="highway.html" style="text-decoration:none;"><div class="formula">🛣 Highway</div></a>
+<a href="railway.html" style="text-decoration:none;"><div class="formula">🚆 Railway</div></a>
+<a href="airport.html" style="text-decoration:none;"><div class="formula">✈ Airport</div></a>
+<a href="survey.html" style="text-decoration:none;"><div class="formula">📏 Surveying</div></a>
+<a href="cpm.html" style="text-decoration:none;"><div class="formula">📅 Planning & Mgmt</div></a>
+<a href="maths.html" style="text-decoration:none;"><div class="formula">➗ Engineering Maths</div></a>
+<a href="som.html" style="text-decoration:none;"><div class="formula">💪 Strength of Materials</div></a>
+<a href="steel.html" style="text-decoration:none;"><div class="formula">🏗 Steel Structures</div></a>
+<a href="drawing.html" style="text-decoration:none;"><div class="formula">✏ Engineering Drawing</div></a>
+
+</div>
+
+</div>
+
+
+<!-- ================= MONETIZATION SECTION ================= -->
+<div class="section">
+<h2>💰 Download Formula PDF</h2>
+
+<p>
+Get clean, exam-ready formula sheets with explanation and examples.
+</p>
+
+<div class="formula">
+<h3>📘 Individual Subject</h3>
+<p>
+Price: ₹19 per subject
+<br>
+Includes: All formulas + explanation + quick revision format
+</p>
+<a href="#">👉 Buy Concrete Formula PDF</a>
+</div>
+
+<div class="formula">
+<h3>📚 Full Bundle (22 Subjects)</h3>
+<p>
+Price: ₹149
+<br>
+Includes: All civil engineering formulas in one PDF
+</p>
+<a href="#">👉 Buy Full Bundle</a>
+</div>
+
+</div>
+
+
+
+<!-- ================= DEFAULT PAYMENT (TEMP) ================= -->
+<div class="section">
+<h2>💳 Download PDF (Demo Mode)</h2>
+
+<p>
+This is a demo payment system. Razorpay will be added later for automatic payment verification.
+</p>
+
+<div class="formula">
+<h3>📘 Concrete Formula PDF</h3>
+<p>
+✔ Full formulas with explanation<br>
+✔ Exam-ready content<br>
+✔ Easy revision format
+</p>
+
+<h3>💰 Price: ₹19</h3>
+
+<button onclick="unlockPDF()">Pay & Download</button>
+
+<br><br>
+
+<a id="downloadLink" href="concrete_formula.pdf" download style="display:none;">
+📥 Download PDF
+</a>
+
+</div>
+</div>
+
+<script>
+function unlockPDF(){
+  alert("Demo: Payment Successful ✅");
+  document.getElementById("downloadLink").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>

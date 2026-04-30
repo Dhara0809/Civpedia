@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CivPedia Lab Master</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f5f5f5; }
+
+header { background:black; color:white; padding:15px; text-align:center; }
+
+.box {
+    background:#007bff;
+    color:white;
+    padding:12px;
+    margin:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.section { display:none; padding:10px; }
+
+.detail { background:white; padding:15px; border-radius:5px; }
+
+.back {
+    background:black;
+    color:white;
+    padding:6px;
+    border:none;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+.star { color:green; font-weight:bold; }
+.warn { color:red; font-weight:bold; }
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🧪 CivPedia Lab</h1>
+<p>Explain • Learn • Apply</p>
+</header>
+
+<!-- ================= HOME ================= -->
+<div id="home" class="section">
+
+<div class="box" onclick="showSection('som')">🧱 Strength Lab</div>
+<div class="box" onclick="showSection('soil')">🌍 Soil Lab</div>
+<div class="box" onclick="showSection('fluid')">💧 Fluid Lab</div>
+<div class="box" onclick="showSection('hydraulics')">🌊 Hydraulics Lab</div>
+<div class="box" onclick="showSection('concrete')">🧱 Concrete Lab</div>
+<div class="box" onclick="showSection('materials')">🧱 Materials Lab</div>
+<div class="box" onclick="showSection('survey')">📏 Survey Lab</div>
+<div class="box" onclick="showSection('construction')">🏗️ Construction Lab</div>
+<div class="box" onclick="showSection('estimation')">💰 Estimation Lab</div>
+<div class="box" onclick="showSection('advanced')">🧪 Advanced Lab</div>
+
+</div>
+
+<!-- ================= STRENGTH ================= -->
+<div id="som" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('tensile')">Tensile Test</div>
+<div class="box" onclick="showTest('compression')">Compression Test</div>
+<div class="box" onclick="showTest('bending')">Bending Test</div>
+<div class="box" onclick="showTest('impact')">Impact Test</div>
+</div>
+
+<!-- ================= SOIL ================= -->
+<div id="soil" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('sieve')">Sieve Analysis</div>
+<div class="box" onclick="showTest('atterberg')">Atterberg Limits</div>
+<div class="box" onclick="showTest('proctor')">Proctor Test</div>
+<div class="box" onclick="showTest('shear')">Direct Shear Test</div>
+</div>
+
+<!-- ================= FLUID ================= -->
+<div id="fluid" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('bernoulli')">Bernoulli</div>
+<div class="box" onclick="showTest('flow')">Flow Measurement</div>
+<div class="box" onclick="showTest('reynolds')">Reynolds</div>
+</div>
+
+<!-- ================= HYDRAULICS ================= -->
+<div id="hydraulics" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('openflow')">Open Channel Flow</div>
+<div class="box" onclick="showTest('venturi')">Venturi Meter</div>
+<div class="box" onclick="showTest('weir')">Weir</div>
+</div>
+
+<!-- ================= CONCRETE ================= -->
+<div id="concrete" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('slump')">Slump Test</div>
+<div class="box" onclick="showTest('cube')">Cube Test</div>
+<div class="box" onclick="showTest('mix')">Mix Design</div>
+</div>
+
+<!-- ================= MATERIALS ================= -->
+<div id="materials" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('cement')">Cement Test</div>
+<div class="box" onclick="showTest('aggregate')">Aggregate Test</div>
+<div class="box" onclick="showTest('brick')">Brick Test</div>
+</div>
+
+<!-- ================= SURVEY ================= -->
+<div id="survey" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('chain')">Chain Survey</div>
+<div class="box" onclick="showTest('levelling')">Levelling</div>
+<div class="box" onclick="showTest('theodolite')">Theodolite</div>
+<div class="box" onclick="showTest('totalstation')">Total Station</div>
+</div>
+
+<!-- ================= CONSTRUCTION ================= -->
+<div id="construction" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('brickwork')">Brickwork</div>
+<div class="box" onclick="showTest('plaster')">Plastering</div>
+<div class="box" onclick="showTest('bar')">Bar Bending</div>
+</div>
+
+<!-- ================= ESTIMATION ================= -->
+<div id="estimation" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('boq')">BOQ</div>
+<div class="box" onclick="showTest('quantity')">Quantity Takeoff</div>
+<div class="box" onclick="showTest('rate')">Rate Analysis</div>
+</div>
+
+<!-- ================= ADVANCED ================= -->
+<div id="advanced" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('water')">Water Test</div>
+<div class="box" onclick="showTest('bitumen')">Bitumen Test</div>
+<div class="box" onclick="showTest('rock')">Rock Test</div>
+</div>
+
+<!-- ================= SAMPLE TEST ================= -->
+<div id="tensile" class="section">
+<button class="back" onclick="showSection('som')">⬅ Back</button>
+<div class="detail">
+
+<h2>Tensile Test</h2>
+
+<p><b>Purpose:</b> To determine tensile strength.</p>
+<p><b>Apparatus:</b> UTM</p>
+
+<p><b>Procedure:</b></p>
+<ul>
+<li>Fix specimen</li>
+<li>Apply load</li>
+</ul>
+
+<p><b>Formula:</b> Stress = Load / Area</p>
+
+<p class="star">⭐ Exam: Stress-strain curve</p>
+<p class="warn">⚠️ Mistake: Improper grip</p>
+
+<p><b>Viva:</b></p>
+<ul>
+<li>What is stress? → Load/area</li>
+</ul>
+
+</div>
+</div>
+
+<script>
+function hideAll(){
+ document.querySelectorAll('.section').forEach(x=>x.style.display='none');
+}
+function showSection(id){
+ hideAll();
+ document.getElementById(id).style.display='block';
+}
+function showTest(id){
+ hideAll();
+ document.getElementById(id).style.display='block';
+}
+window.onload=function(){ showSection('home'); }
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<title>CivPedia Lab Master</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f5f5f5; }
+
+header { background:black; color:white; padding:15px; text-align:center; }
+
+.box {
+    background:#007bff;
+    color:white;
+    padding:12px;
+    margin:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.section { display:none; padding:10px; }
+
+.detail { background:white; padding:15px; border-radius:5px; }
+
+.back {
+    background:black;
+    color:white;
+    padding:6px;
+    border:none;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+.star { color:green; font-weight:bold; }
+.warn { color:red; font-weight:bold; }
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🧪 CivPedia Lab</h1>
+<p>Explain • Learn • Apply</p>
+</header>
+
+<!-- ================= HOME ================= -->
+<div id="home" class="section">
+
+<div class="box" onclick="showSection('som')">🧱 Strength Lab</div>
+<div class="box" onclick="showSection('soil')">🌍 Soil Lab</div>
+<div class="box" onclick="showSection('fluid')">💧 Fluid Lab</div>
+<div class="box" onclick="showSection('hydraulics')">🌊 Hydraulics Lab</div>
+<div class="box" onclick="showSection('concrete')">🧱 Concrete Lab</div>
+<div class="box" onclick="showSection('materials')">🧱 Materials Lab</div>
+<div class="box" onclick="showSection('survey')">📏 Survey Lab</div>
+<div class="box" onclick="showSection('construction')">🏗️ Construction Lab</div>
+<div class="box" onclick="showSection('estimation')">💰 Estimation Lab</div>
+<div class="box" onclick="showSection('advanced')">🧪 Advanced Lab</div>
+
+</div>
+
+<!-- ================= STRENGTH ================= -->
+<div id="som" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('tensile')">Tensile Test</div>
+<div class="box" onclick="showTest('compression')">Compression Test</div>
+<div class="box" onclick="showTest('bending')">Bending Test</div>
+<div class="box" onclick="showTest('impact')">Impact Test</div>
+</div>
+
+<!-- ================= SOIL ================= -->
+<div id="soil" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('sieve')">Sieve Analysis</div>
+<div class="box" onclick="showTest('atterberg')">Atterberg Limits</div>
+<div class="box" onclick="showTest('proctor')">Proctor Test</div>
+<div class="box" onclick="showTest('shear')">Direct Shear Test</div>
+</div>
+
+<!-- ================= FLUID ================= -->
+<div id="fluid" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('bernoulli')">Bernoulli</div>
+<div class="box" onclick="showTest('flow')">Flow Measurement</div>
+<div class="box" onclick="showTest('reynolds')">Reynolds</div>
+</div>
+
+<!-- ================= HYDRAULICS ================= -->
+<div id="hydraulics" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('openflow')">Open Channel Flow</div>
+<div class="box" onclick="showTest('venturi')">Venturi Meter</div>
+<div class="box" onclick="showTest('weir')">Weir</div>
+</div>
+
+<!-- ================= CONCRETE ================= -->
+<div id="concrete" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('slump')">Slump Test</div>
+<div class="box" onclick="showTest('cube')">Cube Test</div>
+<div class="box" onclick="showTest('mix')">Mix Design</div>
+</div>
+
+<!-- ================= MATERIALS ================= -->
+<div id="materials" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('cement')">Cement Test</div>
+<div class="box" onclick="showTest('aggregate')">Aggregate Test</div>
+<div class="box" onclick="showTest('brick')">Brick Test</div>
+</div>
+
+<!-- ================= SURVEY ================= -->
+<div id="survey" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('chain')">Chain Survey</div>
+<div class="box" onclick="showTest('levelling')">Levelling</div>
+<div class="box" onclick="showTest('theodolite')">Theodolite</div>
+<div class="box" onclick="showTest('totalstation')">Total Station</div>
+</div>
+
+<!-- ================= CONSTRUCTION ================= -->
+<div id="construction" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('brickwork')">Brickwork</div>
+<div class="box" onclick="showTest('plaster')">Plastering</div>
+<div class="box" onclick="showTest('bar')">Bar Bending</div>
+</div>
+
+<!-- ================= ESTIMATION ================= -->
+<div id="estimation" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('boq')">BOQ</div>
+<div class="box" onclick="showTest('quantity')">Quantity Takeoff</div>
+<div class="box" onclick="showTest('rate')">Rate Analysis</div>
+</div>
+
+<!-- ================= ADVANCED ================= -->
+<div id="advanced" class="section">
+<button class="back" onclick="showSection('home')">⬅ Back</button>
+
+<div class="box" onclick="showTest('water')">Water Test</div>
+<div class="box" onclick="showTest('bitumen')">Bitumen Test</div>
+<div class="box" onclick="showTest('rock')">Rock Test</div>
+</div>
+
+<!-- ================= SAMPLE TEST ================= -->
+<div id="tensile" class="section">
+<button class="back" onclick="showSection('som')">⬅ Back</button>
+<div class="detail">
+
+<h2>Tensile Test</h2>
+
+<p><b>Purpose:</b> To determine tensile strength.</p>
+<p><b>Apparatus:</b> UTM</p>
+
+<p><b>Procedure:</b></p>
+<ul>
+<li>Fix specimen</li>
+<li>Apply load</li>
+</ul>
+
+<p><b>Formula:</b> Stress = Load / Area</p>
+
+<p class="star">⭐ Exam: Stress-strain curve</p>
+<p class="warn">⚠️ Mistake: Improper grip</p>
+
+<p><b>Viva:</b></p>
+<ul>
+<li>What is stress? → Load/area</li>
+</ul>
+
+</div>
+</div>
+
+<script>
+function hideAll(){
+ document.querySelectorAll('.section').forEach(x=>x.style.display='none');
+}
+function showSection(id){
+ hideAll();
+ document.getElementById(id).style.display='block';
+}
+function showTest(id){
+ hideAll();
+ document.getElementById(id).style.display='block';
+}
+window.onload=function(){ showSection('home'); }
+</script>
+
+</body>
+</html>

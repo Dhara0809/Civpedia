@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Books - CivPedia</title>
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>CivPedia</h1>
+  <p>Learn. Estimate. Execute.</p>
+</header>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="ask.html">Ask</a>
+  <a href="learn.html">Learn</a>
+  <a href="code.html" class="active">Code Books</a>
+  <a href="software.html">Software</a>
+  <a href="tools.html">Tools</a>
+  <a href="pro.html">Pro</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<main class="container">
+
+<!-- 🔍 SEARCH -->
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search IS Code...">
+</div>
+
+<section class="intro">
+  <h2>📘 IS Code Books</h2>
+  <p class="tagline">Important standards for civil engineering</p>
+</section>
+
+<!-- 🧱 CONCRETE -->
+<h3 class="section-title">🧱 Concrete</h3>
+<div class="tool-grid">
+
+  <div class="box" onclick="openCode('IS 456')">
+    <strong>IS 456</strong>
+    <p>RCC Code</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 10262')">
+    <strong>IS 10262</strong>
+    <p>Mix Design</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 383')">
+    <strong>IS 383</strong>
+    <p>Aggregates</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 516')">
+    <strong>IS 516</strong>
+    <p>Concrete Test</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 1199')">
+    <strong>IS 1199</strong>
+    <p>Workability</p>
+  </div>
+
+</div>
+
+<!-- 🏗 STEEL -->
+<h3 class="section-title">🏗 Steel</h3>
+<div class="tool-grid">
+
+  <div class="box" onclick="openCode('IS 800')">
+    <strong>IS 800</strong>
+    <p>Steel Design</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 1786')">
+    <strong>IS 1786</strong>
+    <p>Reinforcement</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 2062')">
+    <strong>IS 2062</strong>
+    <p>Structural Steel</p>
+  </div>
+
+</div>
+
+<!-- 🌍 SOIL -->
+<h3 class="section-title">🌍 Soil</h3>
+<div class="tool-grid">
+
+  <div class="box" onclick="openCode('IS 2720')">
+    <strong>IS 2720</strong>
+    <p>Soil Testing</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 1904')">
+    <strong>IS 1904</strong>
+    <p>Foundation</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 6403')">
+    <strong>IS 6403</strong>
+    <p>Bearing Capacity</p>
+  </div>
+
+</div>
+
+<!-- 💧 WATER -->
+<h3 class="section-title">💧 Water & Environment</h3>
+<div class="tool-grid">
+
+  <div class="box" onclick="openCode('IS 10500')">
+    <strong>IS 10500</strong>
+    <p>Drinking Water</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 1172')">
+    <strong>IS 1172</strong>
+    <p>Water Demand</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 3025')">
+    <strong>IS 3025</strong>
+    <p>Water Testing</p>
+  </div>
+
+</div>
+
+<!-- 📐 GENERAL -->
+<h3 class="section-title">📐 General</h3>
+<div class="tool-grid">
+
+  <div class="box" onclick="openCode('IS 1200')">
+    <strong>IS 1200</strong>
+    <p>Measurement</p>
+  </div>
+
+  <div class="box" onclick="openCode('SP 16')">
+    <strong>SP 16</strong>
+    <p>Design Aids</p>
+  </div>
+
+  <div class="box" onclick="openCode('IS 875')">
+    <strong>IS 875</strong>
+    <p>Loads</p>
+  </div>
+
+</div>
+<button onclick="openCode('IS 456')">TEST CLICK</button>
+</main>
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div class="footer-section">
+<h3>CivPedia</h3>
+<p>Learn. Estimate. Execute.</p>
+<p>Helping civil engineers grow smarter every day.</p>
+</div>
+
+<div class="footer-section">
+<h4>Explore</h4>
+<a href="learn.html">Learn</a>
+<a href="tools.html">Tools</a>
+<a href="ask.html">Dictionary</a>
+<a href="software.html">Software</a>
+<a href="codes.html">Code Books</a>
+</div>
+
+<div class="footer-section">
+<h4>Connect</h4>
+<a href="mailto:civpedia4u@outlook.com">📧 Email</a>
+<a href="#">📸 Instagram</a>
+<a href="#">▶️ YouTube</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 CivPedia • Made with ❤️ for Civil Engineers
+</div>
+
+</footer>
+
+<script src="code.js"></script>
+
+</body>
+</html>

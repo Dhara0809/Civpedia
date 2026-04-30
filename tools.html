@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CivPedia - Tools</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+<img src="logo.png" class="logo">
+<h1>CivPedia</h1>
+<p>Learn. Estimate. Execute.</p>
+</header>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="ask.html">Ask</a>
+<a href="learn.html">Learn</a>
+<a href="code.html">Code Books</a>
+<a href="software.html">Software</a>
+<a href="tools.html" class="active">Tools</a>
+<a href="pro.html">Pro</a>
+<a href="support.html">Support</a>
+</nav>
+
+<main class="container">
+
+<!-- ================= DASHBOARD ================= -->
+<div id="toolSection">
+
+<!-- 🧱 ESTIMATION -->
+<h3 class="section-title">🧱 Estimation</h3>
+<div class="tool-grid">
+<div class="box" onclick="showSection('steelCalc')">Steel</div>
+<div class="box" onclick="showSection('brickCalc')">Brick</div>
+<div class="box" onclick="showSection('mortarCalc')">Mortar</div>
+<div class="box" onclick="showSection('concreteCalc')">Concrete</div>
+<div class="box" onclick="showSection('plasterCalc')">Plaster</div>
+<div class="box" onclick="showSection('paintCalc')">Paint</div>
+<div class="box" onclick="showSection('tileCalc')">Tiles</div>
+<div class="box" onclick="showSection('excavationCalc')">Excavation</div>
+<div class="box" onclick="showSection('bbsCalc')">BBS</div>
+<div class="box" onclick="showSection('bbsProCalc')">BBS Pro</div>
+</div>
+
+
+
+<!-- 🏠 HOUSE -->
+<h3 class="section-title">🏠 House Estimation</h3>
+<div class="tool-grid">
+<div class="box" onclick="showSection('house')">Full House</div>
+</div>
+
+<!-- 🏗 STRUCTURAL -->
+<h3 class="section-title">🏗 Structural</h3>
+<div class="tool-grid">
+<div class="box" onclick="showSection('foundationCalc')">Foundation</div>
+<div class="box" onclick="showSection('columnCalc')">Column</div>
+<div class="box" onclick="showSection('beamCalc')">Beam</div>
+<div class="box" onclick="showSection('lintelCalc')">Lintel</div>
+<div class="box" onclick="showSection('slabCalc')">Slab</div>
+<div class="box" onclick="showSection('sfdCalc')">SFD</div>
+<div class="box" onclick="showSection('bmdCalc')">BMD</div>
+</div>
+
+<!-- 🌍 SOIL -->
+<h3 class="section-title">🌍 Soil</h3>
+<div class="tool-grid">
+<div class="box" onclick="showSection('soilCalc')">Bearing Capacity</div>
+<div class="box" onclick="showSection('sbcCalc')">Safe Bearing Capacity</div>
+<div class="box" onclick="showSection('waterCalc')">Water Content</div>
+<div class="box" onclick="showSection('compactionCalc')">Compaction</div>
+<div class="box" onclick="showSection('classificationCalc')">Soil Type</div>
+</div>
+
+<!-- 💧 WATER -->
+<h3 class="section-title">💧 Water</h3>
+<div class="tool-grid">
+<div class="box" onclick="showSection('dischargeCalc')">Discharge</div>
+<div class="box" onclick="showSection('tankCalc')">Tank Capacity</div>
+</div>
+
+<!-- 🎨 FINISH -->
+<h3 class="section-title">🎨 Finishing</h3>
+<div class="tool-grid">
+<div class="box" onclick="showSection('paintCalc')">Paint</div>
+<div class="box" onclick="showSection('tileCalc')">Tiles</div>
+<div class="box" onclick="showSection('terraceCalc')">Terrace</div>
+</div>
+
+<!-- 📏 UTILITY -->
+<h3 class="section-title">📏 Utilities</h3>
+<div class="tool-grid">
+<div class="box" onclick="showSection('unitCalc')">Unit Converter</div>
+</div>
+
+</div>
+
+<!-- ================= Steel================= -->
+
+<div id="steelCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>Steel Weight Calculator</h2>
+
+<p class="desc">
+Formula: Weight = (d² / 162) × Length
+</p>
+
+<!-- UNIT SELECT -->
+<label>Unit</label>
+<select id="unit">
+<option value="m">Meter (m)</option>
+<option value="ft">Feet (ft)</option>
+</select>
+
+<!-- INPUTS -->
+<label>Diameter (mm)</label>
+<input id="diameter">
+
+<label>Length</label>
+<input id="length">
+
+<button onclick="calculateSteel()">Calculate</button>
+
+<h3 id="steelResult"></h3>
+
+<div id="steelSteps" class="steps"></div>
+
+</div>
+
+<!-- ================= Brickwork================= -->
+
+<div id="brickCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>Brick Calculation</h2>
+
+<p class="desc">
+Estimate number of bricks using volume method  
+Formula: Volume × 500 bricks/m³
+</p>
+
+<!-- UNIT -->
+<label>Unit</label>
+<select id="brickUnit">
+<option value="m">Meter (m)</option>
+<option value="ft">Feet (ft)</option>
+</select>
+
+<!-- INPUTS -->
+<label>Length</label>
+<input id="brickLength" placeholder="Enter length">
+
+<label>Height</label>
+<input id="brickHeight" placeholder="Enter height">
+
+<label>Thickness</label>
+<input id="brickThickness" placeholder="Enter thickness">
+
+<!-- BUTTON -->
+<button onclick="calculateBricks()">Calculate</button>
+
+<!-- RESULT -->
+<h3 id="brickResult"></h3>
+
+<!-- STEPS -->
+<div id="brickSteps" class="steps"></div>
+
+</div>
+
+<!-- ================= Mortar================= -->
+<div id="mortarCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>Mortar Calculation</h2>
+
+<p class="desc">
+Estimate cement and sand required for brickwork mortar  
+Assumption: 30% mortar of brick volume  
+<label>Mix Ratio</label>
+<select id="mortarRatio">
+<option value="6">1 : 6 (Normal Brickwork)</option>
+<option value="4">1 : 4 (Strong Brickwork)</option>
+<option value="5">1 : 5 (Plastering)</option>
+<option value="3">1 : 3 (Rich Mortar)</option>
+</select>
+</p>
+
+<!-- UNIT -->
+<label>Unit</label>
+<select id="mortarUnit">
+<option value="m">Meter (m)</option>
+<option value="ft">Feet (ft)</option>
+</select>
+
+<!-- INPUT -->
+<label>Brickwork Volume</label>
+<input id="mortarVolume" placeholder="Enter volume">
+
+<button onclick="calculateMortar()">Calculate</button>
+
+<h3 id="mortarResult"></h3>
+
+<div id="mortarSteps" class="steps"></div>
+
+</div>
+
+<!-- ================= Concrete================= -->
+
+<div id="concreteCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>Concrete Calculation</h2>
+
+<p class="desc">
+Calculate materials required for concrete using nominal mix  
+Dry Volume = Wet Volume × 1.54
+</p>
+
+<!-- UNIT -->
+<label>Unit</label>
+<select id="concreteUnit">
+<option value="m">Cubic Meter (m³)</option>
+<option value="ft">Cubic Feet (ft³)</option>
+</select>
+
+<!-- VOLUME -->
+<label>Concrete Volume</label>
+<input id="concreteVolume" placeholder="Enter volume">
+
+<!-- GRADE -->
+<label>Concrete Grade</label>
+<select id="concreteGrade">
+<option value="1,2,4">M15 (1:2:4)</option>
+<option value="1,1.5,3">M20 (1:1.5:3)</option>
+<option value="1,1,2">M25 (1:1:2)</option>
+</select>
+
+<button onclick="calculateConcrete()">Calculate</button>
+
+<h3 id="concreteResult"></h3>
+
+<div id="concreteSteps" class="steps"></div>
+
+</div>
+<!-- ================= Plaster================= -->
+<div id="plasterCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>Plaster Calculation</h2>
+
+<p class="desc">
+<p class="desc">
+Plaster quantity is calculated using area × thickness.  
+Standard thickness: 12mm (internal), 15–20mm (external).  
+Dry volume = Wet volume × 1.33  
+Mix ratio varies (1:4, 1:5)
+</p>
+</p>
+
+<label>Unit</label>
+<select id="plasterUnit">
+<option value="m">m²</option>
+<option value="ft">ft²</option>
+</select>
+
+<label>Wall Area</label>
+<input id="plasterArea">
+
+<label>Thickness (mm)</label>
+<input id="plasterThickness" placeholder="12 or 15">
+
+<label>Mix Ratio</label>
+<select id="plasterRatio">
+<option value="5">1:5</option>
+<option value="4">1:4</option>
+</select>
+
+<h3>🔻 Deductions</h3>
+
+<label>Door Area</label>
+<input id="doorArea" placeholder="Enter area">
+
+<label>Window Area</label>
+<input id="windowArea" placeholder="Enter area">
+
+<label>Ventilator Area</label>
+<input id="ventArea" placeholder="Enter area">
+
+<label>Other Openings</label>
+<input id="openArea" placeholder="Enter area">
+
+<button onclick="calculatePlaster()">Calculate</button>
+
+<h3 id="plasterResult"></h3>
+<div id="plasterSteps"></div>
+
+</div>
+<!-- ================= Paint================= -->
+
+<div id="paintCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>Paint Calculation</h2>
+
+<p class="desc">
+Paint quantity depends on surface area, number of coats, and paint coverage.  
+Average coverage: 8–12 m² per litre per coat.  
+Multiple coats increase durability and finish.
+</p>
+
+<!-- UNIT -->
+<label>Unit</label>
+<select id="paintUnit">
+<option value="m">m²</option>
+<option value="ft">ft²</option>
+</select>
+
+<!-- AREA -->
+<label>Wall Area</label>
+<input id="paintArea" placeholder="Enter area">
+
+<!-- COATS -->
+<label>Number of Coats</label>
+<select id="paintCoats">
+<option value="1">1 Coat</option>
+<option value="2">2 Coats</option>
+<option value="3">3 Coats</option>
+</select>
+
+<!-- COVERAGE -->
+<label>Paint Coverage (m² per litre)</label>
+<input id="paintCoverage" value="10">
+
+<!-- 🔻 DEDUCTIONS -->
+<h3>🔻 Deductions</h3>
+
+<input id="paintDoor" placeholder="Door area">
+<input id="paintWindow" placeholder="Window area">
+<input id="paintVent" placeholder="Ventilator area">
+
+<button onclick="calculatePaint()">Calculate</button>
+
+<h3 id="paintResult"></h3>
+
+<div id="paintSteps" class="steps"></div>
+
+</div>
+
+<!-- ================= Tiles================= -->
+<div id="tileCalc" class="calculator" style="display:none;">
+
+<p class="desc">
+Tiles required = Total Area / Tile Area  
+Include skirting area for wall edges.  
+Add 5–10% extra for wastage and cutting.
+</p>
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>Tile Calculation</h2>
+
+<label>Unit</label>
+<select id="tileUnit">
+<option value="m">m²</option>
+<option value="ft">ft²</option>
+</select>
+
+<label>Floor Area</label>
+<input id="tileArea">
+
+<label>Tile Size (sq.ft or m²)</label>
+<input id="tileSize">
+
+<!-- SKIRTING -->
+<h3>Skirting</h3>
+<input id="skirtingLength" placeholder="Perimeter">
+<input id="skirtingHeight" placeholder="Height">
+
+<button onclick="calculateTiles()">Calculate</button>
+
+<h3 id="tileResult"></h3>
+<div id="tileSteps"></div>
+
+</div>
+
+<!-- ================= Excavation================= -->
+
+<div id="excavationCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>Excavation Calculation</h2>
+
+<p class="desc">
+Volume = Length × Width × Depth  
+Used for earthwork estimation
+</p>
+
+<label>Unit</label>
+<select id="excUnit">
+<option value="m">Meter</option>
+<option value="ft">Feet</option>
+</select>
+
+<label>Length</label>
+<input id="excLength">
+
+<label>Width</label>
+<input id="excWidth">
+
+<label>Depth</label>
+<input id="excDepth">
+
+<button onclick="calculateExcavation()">Calculate</button>
+
+<h3 id="excResult"></h3>
+<div id="excSteps"></div>
+
+</div>
+
+<!-- ================= BBS================= -->
+
+<div id="bbsCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>BBS Calculator (Basic)</h2>
+
+<p class="desc">
+Bar Bending Schedule (BBS) calculates total steel required.  
+Formula: Weight = (d² / 162) × Length × Quantity  
+Used in beams, columns, slabs.
+</p>
+
+<label>Diameter (mm)</label>
+<select id="bbsDia">
+<option value="8">8</option>
+<option value="10">10</option>
+<option value="12">12</option>
+<option value="16">16</option>
+</select>
+
+<label>Length (m)</label>
+<input id="bbsLength">
+
+<label>No. of Bars</label>
+<input id="bbsbars">
+
+<label>Number of Members</label>
+<input id="bbsMembers">
+
+<label>Quantity</label>
+<input id="bbsQty">
+
+<button onclick="calculateBBS()">Calculate</button>
+
+<h3 id="bbsResult"></h3>
+<div id="bbsSteps" class="steps"></div>
+
+</div>
+
+<!-- ================= BBSPro================= -->
+
+<div id="bbsProCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>BBS PRO (Advanced)</h2>
+
+<p class="desc">
+Calculate steel with hooks, laps, bends and extra allowances  
+Used for beams, columns, slabs
+</p>
+
+<label>Diameter (mm)</label>
+<input id="bbsDia">
+
+<label>Clear Length (m)</label>
+<input id="bbsLength">
+
+<label>Bars per Member</label>
+<input id="bbsQty">
+
+<label>No. of Members</label>
+<input id="bbsMembers">
+
+<label>No. of Laps</label>
+<input id="bbsLaps">
+
+<label>Extra Length (m)</label>
+<input id="bbsExtra" placeholder="optional">
+
+<label>Hook</label>
+<select id="bbsHook">
+<option value="yes">Yes (9d)</option>
+<option value="no">No</option>
+</select>
+
+<label>Bend Allowance (m)</label>
+<input id="bbsBend" placeholder="optional">
+
+<button onclick="calculateBBSPro()">Calculate</button>
+
+<h3 id="bbsResult"></h3>
+<div id="bbsSteps"></div>
+
+</div>
+
+<!-- ================= HOUSE ================= -->
+<div id="house" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+<h2>House Estimation</h2>
+
+<div class="tool-grid">
+<div class="box" onclick="showSection('quickCalc')">⚡ Quick Estimate</div>
+<div class="box" onclick="showSection('detailedCalc')">🔥 Detailed Estimate</div>
+</div>
+
+</div>
+
+<!-- ================= QUICK ================= -->
+<div id="quickCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="showSection('house')">⬅ Back</div>
+
+<h2>Quick Estimate</h2>
+
+<label>Unit</label>
+<select id="q_unit">
+<option value="ft">Feet</option>
+<option value="m">Meter</option>
+</select>
+
+<label>Length</label>
+<input id="q_L">
+
+<label>Width</label>
+<input id="q_W">
+
+<label>Floors</label>
+<input id="q_floors">
+
+<label>Wastage %</label>
+<select id="q_waste">
+<option value="0.02">2%</option>
+<option value="0.05">5%</option>
+<option value="0.1">10%</option>
+</select>
+
+<h3>Material Rates</h3>
+<input id="q_cementRate" placeholder="Cement ₹/bag">
+<input id="q_steelRate" placeholder="Steel ₹/kg">
+<input id="q_sandRate" placeholder="Sand ₹/m³">
+
+<label>Contingency %</label>
+<select id="q_cont">
+<option value="0.05">5%</option>
+<option value="0.1">10%</option>
+</select>
+
+<button onclick="calculateQuick()">Calculate</button>
+
+<button onclick="toggleExplain('q_explain')">📘 Explanation</button>
+
+<h3 id="q_result"></h3>
+
+<div id="q_steps"></div>
+
+<div id="q_explain" style="display:none;"></div>
+
+</div>
+
+<!-- ================= DETAILED ================= -->
+<div id="detailedCalc" class="calculator" style="display:none;">
+
+<div class="back-btn" onclick="showSection('house')">⬅ Back</div>
+
+<h2>Detailed Estimate (Plot → Terrace)</h2>
+
+<label>Unit</label>
+<select id="d_unit">
+<option value="ft">Feet</option>
+<option value="m">Meter</option>
+</select>
+
+<label>Plot Length</label>
+<input id="d_L">
+
+<label>Plot Width</label>
+<input id="d_W">
+
+<label>Floors</label>
+<input id="d_floors">
+
+<label>Floor Height (m)</label>
+<input id="d_height" value="3">
+
+<label>Foundation Depth (m)</label>
+<input id="d_depth" value="1.5">
+
+<label>Wastage %</label>
+<select id="d_waste">
+<option value="0.02">2%</option>
+<option value="0.05">5%</option>
+<option value="0.1">10%</option>
+</select>
+
+<h3>Material Rates</h3>
+<input id="d_cementRate" placeholder="Cement ₹/bag">
+<input id="d_steelRate" placeholder="Steel ₹/kg">
+<input id="d_sandRate" placeholder="Sand ₹/m³">
+
+<label>Contingency %</label>
+<select id="d_cont">
+<option value="0.05">5%</option>
+<option value="0.1">10%</option>
+</select>
+
+<button onclick="calculateDetailed()">Calculate</button>
+
+<button onclick="toggleExplain('d_explain')">📘 Explanation</button>
+
+<h3 id="d_result"></h3>
+
+<div id="d_steps"></div>
+
+<div id="d_explain" style="display:none;"></div>
+
+</div>
+<!-- ================= Foundation ================= -->
+
+<div id="foundationCalc" class="calculator" style="display:none;">
+<button onclick="goBack()">⬅ Back</button>
+
+<h2>Foundation</h2>
+
+<select id="foundationType">
+<option>Isolated</option>
+<option>Combined</option>
+<option>Raft</option>
+</select>
+
+<input id="fLoad" placeholder="Load (kN)">
+<input id="fArea" placeholder="Area (m²)">
+
+<button onclick="calculateFoundation()">Calculate</button>
+
+<div id="foundationResult"></div>
+</div>
+
+<!-- ================= Column ================= -->
+<div id="columnCalc" class="calculator" style="display:none;">
+<button onclick="goBack()">⬅ Back</button>
+
+<h2>Column</h2>
+
+<select id="columnType">
+<option>Short Column</option>
+<option>Long Column</option>
+</select>
+
+<input id="colLoad" placeholder="Load (kN)">
+<input id="colArea" placeholder="Area (mm²)">
+
+<button onclick="calculateColumn()">Calculate</button>
+
+<div id="columnResult"></div>
+</div>
+
+<!-- ================= Beam ================= -->
+<div id="beamCalc" class="calculator" style="display:none;">
+<button onclick="goBack()">⬅ Back</button>
+
+<h2>Beam</h2>
+
+<select id="beamType">
+<option>Simply Supported</option>
+<option>Cantilever</option>
+</select>
+
+<select id="beamUnit">
+<option value="m">Meter</option>
+<option value="ft">Feet</option>
+</select>
+
+<input id="beamLength" placeholder="Length">
+<input id="beamLoad" placeholder="Load (kN/m)">
+
+<button onclick="calculateBeam()">Calculate</button>
+
+<div id="beamResult"></div>
+</div>
+
+<!-- ================= Lintel ================= -->
+<div id="lintelCalc" class="calculator" style="display:none;">
+<button onclick="goBack()">⬅ Back</button>
+
+<h2>Lintel</h2>
+
+<input id="lintelSpan" placeholder="Span (m)">
+<input id="lintelLoad" placeholder="Load (kN/m)">
+
+<button onclick="calculateLintel()">Calculate</button>
+
+<div id="lintelResult"></div>
+</div>
+
+<!-- ================= Slab ================= -->
+<div id="slabCalc" class="calculator" style="display:none;">
+<button onclick="goBack()">⬅ Back</button>
+
+<h2>Slab</h2>
+
+<select id="slabType">
+<option>One Way</option>
+<option>Two Way</option>
+</select>
+
+<select id="slabUnit">
+<option value="m">Meter</option>
+<option value="ft">Feet</option>
+</select>
+
+<input id="slabThickness" placeholder="Thickness">
+<input id="slabDensity" placeholder="Density (kN/m³)">
+<input id="slabLive" placeholder="Live Load (kN/m²)">
+
+<button onclick="calculateSlab()">Calculate</button>
+
+<div id="slabResult"></div>
+</div>
+
+<!-- 💧 TANK -->
+<div id="tankCalc" class="calculator" style="display:none;">
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+<h2>Tank Capacity</h2>
+<input id="tankLength" placeholder="Length">
+<input id="tankWidth" placeholder="Width">
+<input id="tankHeight" placeholder="Height">
+<button onclick="calculateTank()">Calculate</button>
+<h3 id="tankResult"></h3>
+</div>
+
+<!-- 🌍 SOIL -->
+<div id="soilCalc" class="calculator" style="display:none;">
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+<h2>Bearing Capacity</h2>
+<input id="soilC" placeholder="Cohesion">
+<input id="soilDepth" placeholder="Depth">
+<button onclick="calculateSoil()">Calculate</button>
+<h3 id="soilResult"></h3>
+</div>
+
+<div id="sbcCalc" class="calculator" style="display:none;">
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+<h2>Safe Bearing Capacity</h2>
+<input id="netPressure" placeholder="Net Pressure">
+<input id="factor" placeholder="Factor of Safety">
+<button onclick="calculateSBC()">Calculate</button>
+<h3 id="sbcResult"></h3>
+</div>
+
+<div id="waterCalc" class="calculator" style="display:none;">
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+<h2>Water Content</h2>
+<input id="wet" placeholder="Wet Weight">
+<input id="dry" placeholder="Dry Weight">
+<button onclick="calculateWater()">Calculate</button>
+<h3 id="waterResult"></h3>
+</div>
+
+<div id="compactionCalc" class="calculator" style="display:none;">
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+<h2>Compaction (Dry Density)</h2>
+<input id="mass" placeholder="Mass">
+<input id="volume" placeholder="Volume">
+<button onclick="calculateCompaction()">Calculate</button>
+<h3 id="compactionResult"></h3>
+</div>
+
+<div id="classificationCalc" class="calculator" style="display:none;">
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+<h2>Soil Classification</h2>
+
+<select id="soilType">
+<option>Clay</option>
+<option>Sand</option>
+<option>Silt</option>
+<option>Gravel</option>
+</select>
+
+<button onclick="classifySoil()">Check</button>
+
+<h3 id="classResult"></h3>
+</div>
+
+<!-- 🎨 TERRACE -->
+<div id="terraceCalc" class="calculator" style="display:none;">
+<div class="back-btn" onclick="goBack()">⬅ Back</div>
+<h2>Terrace Waterproofing</h2>
+<input id="terraceArea" placeholder="Area">
+<button onclick="calculateTerrace()">Calculate</button>
+<h3 id="terraceResult"></h3>
+</div>
+
+</main>
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div class="footer-section">
+<h3>CivPedia</h3>
+<p>Learn. Estimate. Execute.</p>
+<p>Helping civil engineers grow smarter every day.</p>
+</div>
+
+<div class="footer-section">
+<h4>Explore</h4>
+<a href="learn.html">Learn</a>
+<a href="tools.html">Tools</a>
+<a href="ask.html">Dictionary</a>
+<a href="software.html">Software</a>
+<a href="codes.html">Code Books</a>
+</div>
+
+<div class="footer-section">
+<h4>Connect</h4>
+<a href="mailto:civpedia4u@outlook.com">📧 Email</a>
+<a href="https://instagram.com/civpedia_base_to_beyond">📸 Instagram</a>
+<a href="https://youtube.com/@civpedia_basetobeyond?si=ZKES">▶️ YouTube</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 CivPedia • Made with ❤️ for Civil Engineers
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask - CivPedia</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <img src="logo.png" class="logo">
+  <h1>CivPedia</h1>
+  <p>Learn. Estimate. Execute.</p>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="ask.html" class="active">Ask</a>
+  <a href="learn.html">Learn</a>
+  <a href="codes.html">Code Books</a>
+  <a href="software.html">Software</a>
+  <a href="tools.html">Tools</a>
+  <a href="pro.html">Pro</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<!-- MAIN -->
+<main class="container fade-in">
+
+<section class="intro">
+  <h2>📖 Civil Engineering Dictionary</h2>
+  <p class="tagline">Search and understand civil terms easily</p>
+</section>
+
+<!-- LANGUAGE -->
+<div class="lang-toggle">
+  <button id="btn-en" class="lang-btn active" onclick="setLang('en')">English</button>
+  <button id="btn-ta" class="lang-btn" onclick="setLang('ta')">தமிழ்</button>
+</div>
+
+<!-- SEARCH -->
+<section>
+  <input type="text" id="searchBox" placeholder="🔍 Search civil term..." onkeyup="searchTerm()" class="search-input">
+</section>
+<p style="text-align:center; opacity:0.7;">
+  💡 Try: Beam, Slab, Footing
+</p>
+<!-- 🔥 POPULAR TERMS -->
+<section class="popular">
+  <h3>🔥 Popular Terms</h3>
+
+  <div class="topics-grid">
+    <div class="topic" onclick="searchWord('Beam')">Beam</div>
+    <div class="topic" onclick="searchWord('Footing')">Footing</div>
+    <div class="topic" onclick="searchWord('Slab')">Slab</div>
+    <div class="topic" onclick="searchWord('Concrete')">Concrete</div>
+    <div class="topic" onclick="searchWord('Load')">Load</div>
+  </div>
+</section>
+
+<!-- 🔽 ALPHABET BUTTON -->
+<section>
+  <button onclick="toggleAlphabet()" class="cta-btn">Browse A–Z</button>
+</section>
+
+<!-- 🔽 HIDDEN ALPHABET -->
+<section id="alphabetBox" class="features">
+
+<button onclick="showLetter('A')">A</button>
+<button onclick="showLetter('B')">B</button>
+<button onclick="showLetter('C')">C</button>
+<button onclick="showLetter('D')">D</button>
+<button onclick="showLetter('E')">E</button>
+<button onclick="showLetter('F')">F</button>
+<button onclick="showLetter('G')">G</button>
+<button onclick="showLetter('H')">H</button>
+<button onclick="showLetter('I')">I</button>
+<button onclick="showLetter('J')">J</button>
+<button onclick="showLetter('K')">K</button>
+<button onclick="showLetter('L')">L</button>
+<button onclick="showLetter('M')">M</button>
+<button onclick="showLetter('N')">N</button>
+<button onclick="showLetter('O')">O</button>
+<button onclick="showLetter('P')">P</button>
+<button onclick="showLetter('Q')">Q</button>
+<button onclick="showLetter('R')">R</button>
+<button onclick="showLetter('S')">S</button>
+<button onclick="showLetter('T')">T</button>
+<button onclick="showLetter('U')">U</button>
+<button onclick="showLetter('V')">V</button>
+<button onclick="showLetter('W')">W</button>
+<button onclick="showLetter('X')">X</button>
+<button onclick="showLetter('Y')">Y</button>
+<button onclick="showLetter('Z')">Z</button>
+
+</section>
+
+<!-- RESULT -->
+<section>
+  <div id="resultBox" class="result-box">
+    <p>🔍 Start typing or choose a term</p>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div class="footer-section">
+<h3>CivPedia</h3>
+<p>Learn. Estimate. Execute.</p>
+</div>
+
+<div class="footer-section">
+<h4>Explore</h4>
+<a href="learn.html">Learn</a>
+<a href="tools.html">Tools</a>
+<a href="software.html">Software</a>
+</div>
+
+<div class="footer-section">
+<h4>Connect</h4>
+<a href="mailto:civpedia4u@outlook.com">Email</a>
+<a href="https://instagram.com/civpedia_base_to_beyond">Instagram</a>
+<a href="https://youtube.com/@civpedia_basetobeyond">YouTube</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 CivPedia • Made with ❤️ for Civil Engineers
+</div>
+
+</footer>
+
+<script src="dictionary.js"></script>
+
+</body>
+</html>
